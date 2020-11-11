@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>FECHAS</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/estilos.css">
+    </head>
+    <body>
+        <header><h1>Fechas</h1></header>
+        
+        <form id="forma" action="javascript:procesa()">
+            <p><em>El borde azul indica obligatorio</em></p>
+            <p>
+                <label accesskey="F">
+                    Fecha entre 20202-01-24 y 2021-01-24<br>
+                    <input name="fecha" type="date" autofocus required
+                           max="2021-01-24" min="2020-01-24">
+                </label>
+                <br><em>año-mes-dia (ej. 2020-10-18)</em><br>
+                <output id="salidaFecha"></output> 
+            </p>
+            
+            <!-- Hora -->
+            <p>
+                <label accesskey="H">
+                    Hora<br>
+                    <input name="hora" type="time" autofocus required>
+                </label>
+                <br><em>hora:minutos (ej. 20:58)</em><br>
+                <output id="salidaHora"></output> 
+            </p>
+            
+            <!-- HORA Y FECHA -->
+             <p>
+                <label accesskey="Y">
+                    Fecha y Hora<br>
+                    <input name="fechaYHora" type="datetime" required
+                           value="2020-02-24T18:30-06:00">
+                </label>
+                <br><em>año-mes-díaThoras:minutosZonaHoraria</em>
+                <br><em>(ej. 2020-02-24T18:30-06:00)</em><br>
+                <output id="salidaFechaYHora"></output>
+            </p>
+            
+             <!--FECHA Y HORA LOCAL  -->
+            <p>
+                <label accesskey="L">
+                    Fecha y Hora Local<br>
+                    <input name="fechaYHoraLocal" type="datetime-local" required>
+                </label>
+                <br><em>año-mes-díaThoras:minutos</em>
+                <br><em>(ej. 2020-02-24T18:30)</em><br>
+                <output id="salidaFechaYHoraLocal"></output>
+            </p>
+            
+            
+             <!-- SEMANA -->
+            <p>
+                <label accesskey="S">
+                    Semana<br>
+                    <input name="semana" type="week"  required>
+                </label>
+                <br><em>año-Wsemana (ej. 2020-W01)</em><br>
+                <output id="salidaSemana"></output> 
+            </p>
+            
+            <!-- MES -->
+            <p>
+                <label accesskey="M">
+                   Mes<br>
+                    <input name="mes" type="month"  required>
+                </label>
+                <br><em>año-mes (ej. 2020-01)</em><br>
+                <output id="salidaMes"></output> 
+            </p>
+            
+            
+             <!-- Botón -->
+             
+             <p><input type="submit" value="procesar" accesskey="P"> </p>
+        </form>
+        <footer>Copyright &copy; C.G.M.P_OCT-2020 - IC-43M</footer>
+        
+        <script src="js/CtrlFechas.js"></script>
+    </body>
+</html>
